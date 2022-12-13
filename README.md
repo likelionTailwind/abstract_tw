@@ -19,12 +19,8 @@ Frontend Practice _ abtract Clone project
 -----------------
 ### kind of plan _ boxModeling
 
-![box_modeling:PC][def]
+-box_modeling:PC
+![box_modeling:PC](./src/assets/plan_box/plan_box1.png)
 
-
-[def]: ./src/assets/plan_box/plan_box1.png
-
-![box_modeling:Mobile - working...][def]
-
-
-[def]: ./src/assets/plan_box/plan_box2.png
+-box_modeling:Mobile - working...
+![box_modeling:Mobile - working...](./src/assets/plan_box/plan_box2.png)
