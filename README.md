@@ -27,4 +27,4 @@ Frontend Practice _ abtract Clone project
 ![box_modeling:Mobile - working...][def]
 
 
-[def]: ./src/assets/plan_box/plan_box1.png
+[def]: ./src/assets/plan_box/plan_box2.png
