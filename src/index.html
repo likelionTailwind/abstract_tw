@@ -21,7 +21,7 @@
     <!-- header -->
     <header>
       <header_wrap
-        class="bg-black flex justify-between items-center px-20 py-7 align-middle"
+        class="bg-black flex justify-between sm:px-3 md:px-16 lg:px-20 py-7 align-middle"
       >
         <!-- header-logo -->
         <div class="flex">
@@ -83,25 +83,57 @@
         </div>
         <!-- header-buttons -->
         <div>
+          <!-- 모바일, 중간크기 버전 -->
+          <a href="/"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              style="fill: rgba(255, 255, 255, 1); transform: ; msfilter: "
+              class="mr-9 lg:hidden"
+            >
+              <path
+                d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
+              ></path>
+            </svg>
+          </a>
+
+          <a href="/"
+            ><span
+              class="block absolute top-8 sm:right-4 md:right-16 w-6 h-1 rounded bg-white lg:hidden"
+            ></span>
+            <span
+              class="block absolute top-10 sm:right-4 md:right-16 w-6 h-1 rounded bg-white lg:hidden"
+            ></span>
+            <span
+              class="block absolute top-12 sm:right-4 md:right-16 w-6 h-1 rounded bg-white lg:hidden"
+            ></span
+          ></a>
+
+          <!-- 데스크탑 버전 -->
           <a
             href="/"
-            class="text-2xl text-white border border-white rounded-lg px-5 py-2"
+            class="lg:text-2xl lg:text-white lg:border lg:border-white rounded-lg px-5 py-2 sm:hidden md:hidden"
             >Submit a request</a
           >
           <a
             href="/"
-            class="text-2xl text-white border border-blue bg-blue rounded-lg px-8 py-2 ml-4 hover:bg-white hover:text-black transition-all delay-75 focus:bg-white focus:text-black"
+            class="lg:text-2xl lg:text-white lg:border lg:border-blue lg:bg-blue rounded-lg px-8 py-2 ml-4 hover:bg-white hover:text-black transition-all delay-75 focus:bg-white focus:text-black sm:hidden md:hidden"
             >Sign in</a
           >
         </div>
       </header_wrap>
     </header>
 
-    <!-- section 1 -->
-    <main class="bg-lilac h-[397px] flex justify-center items-center flex-col">
+    <main
+      class="bg-lilac h-[397px] flex justify-center items-center flex-col min-w-full"
+    >
       <h3 class="sr-only">section_1</h3>
-      <p class="text-[80px] mb-4">How can we help?</p>
-      <form action="/" method="POST">
+      <p class="mb-4 sm:text-5xl md:text-7xl lg:text-[80px]">
+        How can we help?
+      </p>
+      <form action="/" method="POST" class="w-full lg:flex lg:justify-center">
         <fieldset class="relative">
           <legend class="sr-only">검색 창</legend>
           <div>
@@ -111,17 +143,18 @@
               autocomplete="off"
               name="search"
               id="search"
-              class="block w-[720px] h-16 border border-solid border-1 border-gray-700 rounded shadow-lg shadow-blue-500/40 pl-5 text-xl focus:outline-0"
+              class="inline-block lg:w-[720px] md:w-2/3 h-16 box-border border border-solid border-1 border-gray-700 rounded shadow-lg shadow-blue-500/40 pl-5 text-xl focus:outline-0"
               placeholder="Search"
             />
           </div>
-          <button type="submit" class="absolute right-3 top-1/4">
+          <button type="submit" class="absolute top-0 right-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="36"
               height="36"
               viewBox="0 0 24 24"
               style="fill: rgba(0, 0, 0, 1); transform: ; msfilter: "
+              class="hover:fill-white"
             >
               <path
                 d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
@@ -131,5 +164,156 @@
         </fieldset>
       </form>
     </main>
+
+    <section>
+      <h3 class="sr-only">help list</h3>
+      <ul>
+        <li class="flex">
+          <div><img src="./assets/branch.png" class="w-16 h-16" /></div>
+          <div>
+            <h4 class="text-xl font-bold">Using Abstract</h4>
+            <a class="text-xl"
+              >Abstract lets you manage, version, and document your designs in
+              one place.</a
+            >
+            <a class="text-blue">Learn More</a>
+          </div>
+        </li>
+        <li class="flex">
+          <div><img src="./assets/human.png" class="w-16 h-16" /></div>
+          <div>
+            <h4 class="text-xl font-bold">Manage your account</h4>
+            <a class="text-xl"
+              >Configure your account settings, such as your email, profile
+              details, and password.</a
+            >
+            <a class="text-blue">Learn More</a>
+          </div>
+        </li>
+        <li class="flex">
+          <div><img src="./assets/puzzle.png" class="w-16 h-16" /></div>
+          <div>
+            <h4 class="text-xl font-bold">
+              Manage organizations, teams, and projects
+            </h4>
+            <a class="text-xl"
+              >Use Abstract organizations, teams, and projects to organize your
+              people and your work.</a
+            >
+            <a class="text-blue">Learn More</a>
+          </div>
+        </li>
+        <li class="flex">
+          <div><img src="./assets/dollar.png" class="w-16 h-16" /></div>
+          <div>
+            <h4 class="text-xl font-bold">Manage billing</h4>
+            <a class="text-xl">Change subscriptions and payment details.</a>
+            <a class="text-blue">Learn More</a>
+          </div>
+        </li>
+        <li class="flex">
+          <div><img src="./assets/key.png" class="w-16 h-16" /></div>
+          <div>
+            <h4 class="text-xl font-bold">Authenticate to Abstract</h4>
+            <a class="text-xl"
+              >Set up and configure SSO, SCIM, and Just-in-Time provisioning.</a
+            >
+            <a class="text-blue">Learn More</a>
+          </div>
+        </li>
+        <li class="flex">
+          <div><img src="./assets/message.png" class="w-16 h-16" /></div>
+          <div>
+            <h4 class="text-xl font-bold">Abstract support</h4>
+            <a class="text-xl">Get in touch with a human.</a>
+            <a class="text-blue">Learn More</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <button class="bg-blue rounded-full px-6 py-4 flex">
+      <svg
+        class="fill-white"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        aria-hidden="true"
+      >
+        <g id="Layer_4">
+          <path
+            d="M11,12.3V13c0,0-1.8,0-2,0v-0.6c0-0.6,0.1-1.4,0.8-2.1c0.7-0.7,1.6-1.2,1.6-2.1c0-0.9-0.7-1.4-1.4-1.4 c-1.3,0-1.4,1.4-1.5,1.7H6.6C6.6,7.1,7.2,5,10,5c2.4,0,3.4,1.6,3.4,3C13.4,10.4,11,10.8,11,12.3z"
+          ></path>
+          <circle cx="10" cy="15" r="1"></circle>
+          <path
+            d="M10,2c4.4,0,8,3.6,8,8s-3.6,8-8,8s-8-3.6-8-8S5.6,2,10,2 M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10s10-4.5,10-10S15.5,0,10,0 L10,0z"
+          ></path>
+        </g>
+      </svg>
+      <span class="text-white">Help</span>
+    </button>
+    <footer class="bg-black text-white flex">
+      <h3 class="sr-only">necesarry onformation and help</h3>
+      <ul class="info_wrap flex">
+        <li class="info1">
+          <h4 class="info_title font-bold text-red-700">Abstract</h4>
+          <ul class="info_list">
+            <li><a href="/">Start Trial</a></li>
+            <li><a href="/">Pricing</a></li>
+            <li><a href="/">Download</a></li>
+          </ul>
+        </li>
+        <li class="info2">
+          <h4 class="info_title font-bold">Resources</h4>
+          <ul class="info_list">
+            <li><a href="/">Blog</a></li>
+            <li><a href="/">Help Center</a></li>
+            <li><a href="/">Release Notes</a></li>
+            <li><a href="/">Status</a></li>
+          </ul>
+        </li>
+        <li class="info3">
+          <h4 class="info_title font-bold">Community</h4>
+          <ul class="info_list">
+            <li><a href="/">Twitter</a></li>
+            <li><a href="/">LinkedIn</a></li>
+            <li><a href="/">Facebook</a></li>
+            <li><a href="/">Dribbble</a></li>
+          </ul>
+        </li>
+        <li class="info4">
+          <h4 class="info_title font-bold">Company</h4>
+          <ul class="info_list">
+            <li><a href="/">About Us</a></li>
+            <li><a href="/">Careers</a></li>
+            <li><a href="/">Legal</a></li>
+            <li class="e-mail">
+              <h5 class="font-bold">Contact Us</h5>
+              <a href="mailto:info@abstract.com">info@abstract.com</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="footer_right flex flex-col">
+        <div class="footer_logo">
+          <!-- <svg class="abstract-logo-footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 51" preserveAspectRatio="xMinYMid slice"> -->
+          <svg
+            class="abstract-logo-footer"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMinYMid slice"
+          >
+            <g class="abstract-logo-mark-footer" fill="#fff">
+              <path
+                d="M25.41 0C5.08 0 0 5.08 0 25.41s5.08 25.41 25.41 25.41 25.41-5.08 25.41-25.41S45.74 0 25.41 0zm-4.17 39.31A9.73 9.73 0 1 1 31 29.58a9.75 9.75 0 0 1-9.76 9.73zm17.67-.4h-4.77V16.67H11.91v-4.76h27z"
+              ></path>
+              <circle cx="21.24" cy="29.58" r="4.96"></circle>
+            </g>
+          </svg>
+        </div>
+        <div class="copy">
+          © Copyright 2022<br />Abstract Studio Design, Inc.<br />All rights
+          reserved
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
