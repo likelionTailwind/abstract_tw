@@ -127,13 +127,17 @@
     </header>
 
     <main
-      class="bg-lilac h-[397px] flex justify-center items-center flex-col min-w-full"
+      class="bg-lilac h-[397px] flex justify-center items-center flex-col w-full"
     >
       <h3 class="sr-only">section_1</h3>
       <p class="mb-4 sm:text-5xl md:text-7xl lg:text-[80px]">
         How can we help?
       </p>
-      <form action="/" method="POST" class="w-full lg:flex lg:justify-center">
+      <form
+        action="/"
+        method="POST"
+        class="max-w-full lg:flex lg:justify-center"
+      >
         <fieldset class="relative">
           <legend class="sr-only">검색 창</legend>
           <div>
@@ -143,11 +147,11 @@
               autocomplete="off"
               name="search"
               id="search"
-              class="inline-block lg:w-[720px] md:w-2/3 h-16 box-border border border-solid border-1 border-gray-700 rounded shadow-lg shadow-blue-500/40 pl-5 text-xl focus:outline-0"
+              class="inline-block lg:w-[720px] md:w-[550px] h-16 box-border border border-solid border-1 border-gray-700 rounded shadow-lg shadow-blue-500/40 pl-5 text-xl focus:outline-0"
               placeholder="Search"
             />
           </div>
-          <button type="submit" class="absolute top-0 right-0">
+          <button type="submit" class="absolute top-[14px] right-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="36"
