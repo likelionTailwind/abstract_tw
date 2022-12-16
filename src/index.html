@@ -21,7 +21,7 @@
     <!-- header -->
     <header>
       <header_wrap
-        class="bg-black flex justify-between items-center px-20 py-7 align-middle"
+        class="bg-black flex justify-between sm:px-3 md:px-16 lg:px-20 py-7 align-middle"
       >
         <!-- header-logo -->
         <div class="flex">
@@ -83,25 +83,57 @@
         </div>
         <!-- header-buttons -->
         <div>
+          <!-- 모바일, 중간크기 버전 -->
+          <a href="/"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              style="fill: rgba(255, 255, 255, 1); transform: ; msfilter: "
+              class="mr-9 lg:hidden"
+            >
+              <path
+                d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
+              ></path>
+            </svg>
+          </a>
+
+          <a href="/"
+            ><span
+              class="block absolute top-8 sm:right-4 md:right-16 w-6 h-1 rounded bg-white lg:hidden"
+            ></span>
+            <span
+              class="block absolute top-10 sm:right-4 md:right-16 w-6 h-1 rounded bg-white lg:hidden"
+            ></span>
+            <span
+              class="block absolute top-12 sm:right-4 md:right-16 w-6 h-1 rounded bg-white lg:hidden"
+            ></span
+          ></a>
+
+          <!-- 데스크탑 버전 -->
           <a
             href="/"
-            class="text-2xl text-white border border-white rounded-lg px-5 py-2"
+            class="lg:text-2xl lg:text-white lg:border lg:border-white rounded-lg px-5 py-2 sm:hidden md:hidden"
             >Submit a request</a
           >
           <a
             href="/"
-            class="text-2xl text-white border border-blue bg-blue rounded-lg px-8 py-2 ml-4 hover:bg-white hover:text-black transition-all delay-75 focus:bg-white focus:text-black"
+            class="lg:text-2xl lg:text-white lg:border lg:border-blue lg:bg-blue rounded-lg px-8 py-2 ml-4 hover:bg-white hover:text-black transition-all delay-75 focus:bg-white focus:text-black sm:hidden md:hidden"
             >Sign in</a
           >
         </div>
       </header_wrap>
     </header>
 
-    <!-- section 1 -->
-    <main class="bg-lilac h-[397px] flex justify-center items-center flex-col">
+    <main
+      class="bg-lilac h-[397px] flex justify-center items-center flex-col min-w-full"
+    >
       <h3 class="sr-only">section_1</h3>
-      <p class="text-[80px] mb-4">How can we help?</p>
-      <form action="/" method="POST">
+      <p class="mb-4 sm:text-5xl md:text-7xl lg:text-[80px]">
+        How can we help?
+      </p>
+      <form action="/" method="POST" class="w-full lg:flex lg:justify-center">
         <fieldset class="relative">
           <legend class="sr-only">검색 창</legend>
           <div>
@@ -111,17 +143,18 @@
               autocomplete="off"
               name="search"
               id="search"
-              class="block w-[720px] h-16 box-border border border-solid border-1 border-gray-700 rounded shadow-lg shadow-blue-500/40 pl-5 text-xl focus:outline-0"
+              class="inline-block lg:w-[720px] md:w-2/3 h-16 box-border border border-solid border-1 border-gray-700 rounded shadow-lg shadow-blue-500/40 pl-5 text-xl focus:outline-0"
               placeholder="Search"
             />
           </div>
-          <button type="submit" class="absolute right-3 top-1/4">
+          <button type="submit" class="absolute top-0 right-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="36"
               height="36"
               viewBox="0 0 24 24"
               style="fill: rgba(0, 0, 0, 1); transform: ; msfilter: "
+              class="hover:fill-white"
             >
               <path
                 d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
