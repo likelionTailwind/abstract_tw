@@ -15,10 +15,6 @@ module.exports = {
         blue: "#4C5FD5",
         lilac: "#dadbf1",
       },
-      screens: {
-        sm: { max: "767px" },
-        md: { min: "768px", max: "1023px" },
-      },
     },
   },
   plugins: [],
