@@ -1,15 +1,143 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
-  <title>Abstract Tailwind CSS</title>
-</head>
-<body class="font-sans">
-  <section class="mx-28 my-28 sm:mx-14 ">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://theme.zdassets.com/theme_assets/2197739/1a71d05024d0bf628f47cb2a498903409ad571f0.png"
+      type="image/x-icon"
+    />
+    <title>Abstract Tailwind CSS</title>
+  </head>
+  <body class="font-sans">
+    <!-- header -->
+    <header>
+      <header_wrap
+        class="bg-black flex justify-between items-center px-20 py-7 align-middle"
+      >
+        <!-- header-logo -->
+        <div class="flex">
+          <h1 class="w-32">
+            <a href="/" class="hover:opacity-70 transition-all delay-75"
+              ><svg
+                class="abstract-logo logo"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 200 51"
+                preserveAspectRatio="xMinYMid slice"
+              >
+                <g class="abstract-logo-mark" fill="#fff">
+                  <path
+                    d="M25.41 0C5.08 0 0 5.08 0 25.41s5.08 25.41 25.41 25.41 25.41-5.08 25.41-25.41S45.74 0 25.41 0zm-4.17 39.31A9.73 9.73 0 1 1 31 29.58a9.75 9.75 0 0 1-9.76 9.73zm17.67-.4h-4.77V16.67H11.91v-4.76h27z"
+                  ></path>
+                  <circle cx="21.24" cy="29.58" r="4.96"></circle>
+                </g>
+                <g class="abstract-logo-wordmark" fill="#fff">
+                  <path
+                    class="abstract-logo-letter-1"
+                    d="M70.9 28.81c2.37-6.59 3.32-9.26 4.19-12 1.26 3.92 2.56 7.58 4.08 12zM72.54 12L62.33 38.91h5.22l2.17-6.29h10.63l2.13 6.29h5.26L77.91 12z"
+                  ></path>
+                  <path
+                    class="abstract-logo-letter-2"
+                    d="M98.43 35.56c-2.82 0-4.46-2.33-4.46-6.37 0-3.62 1.91-5.9 4.61-5.9 2.55 0 4.12 2.32 4.12 6.13 0 4-1.64 6.14-4.27 6.14m-4.34-13.07V12h-4.46v26.9h4.27v-2.47a6.31 6.31 0 0 0 5.63 2.86c4.69 0 7.81-3.66 7.81-9.87s-2.85-9.87-7.31-9.87a7.3 7.3 0 0 0-5.94 2.94z"
+                  ></path>
+                  <path
+                    class="abstract-logo-letter-3"
+                    d="M116.71 22.8a4.77 4.77 0 0 1 4.29 2.67l3.32-2.25a8.44 8.44 0 0 0-7.48-3.82c-4.69 0-7.36 2.75-7.36 5.73s1.87 4.61 4.81 5.53l2 .65c2.86.91 3.51 1.45 3.51 2.71s-1.07 2-3 2a5.34 5.34 0 0 1-4.84-3.09l-3.47 2.29a9.35 9.35 0 0 0 8.12 4.27c4.73 0 7.67-2.56 7.67-6.07 0-3-1.91-4.61-5.26-5.68l-2-.61c-2.44-.76-3-1.3-3-2.44s.92-1.87 2.82-1.87"
+                  ></path>
+                  <path
+                    class="abstract-logo-letter-4"
+                    d="M133.3 23.52h3.7V20h-3.7v-6.2h-4.44l-.08 6.2h-3v3.57h3v10.4a5.92 5.92 0 0 0 1.07 4c.77.92 2 1.38 3.9 1.38a13.24 13.24 0 0 0 3.32-.43v-3.59a5.51 5.51 0 0 1-1.83.35c-1.38 0-1.94-.69-1.94-2.64z"
+                  ></path>
+                  <path
+                    class="abstract-logo-letter-5"
+                    d="M143.77 20h-4.27v19h4.5v-8.88a7.63 7.63 0 0 1 1-4.36 4.43 4.43 0 0 1 4-1.89 6.15 6.15 0 0 1 1.64.25V20a5.3 5.3 0 0 0-1.64-.3 5.44 5.44 0 0 0-5.26 3.18z"
+                  ></path>
+                  <path
+                    class="abstract-logo-letter-6"
+                    d="M163.54 30.93a5.57 5.57 0 0 1-.84 3 4.61 4.61 0 0 1-4 2c-2 0-2.9-1-2.9-2.4a2.34 2.34 0 0 1 1.64-2.33 18.72 18.72 0 0 1 6.07-1.15zm4.25-4c0-3-.4-4.54-1.58-5.65s-3.09-1.83-5.69-1.83c-4.85 0-7.91 2.29-8.21 6.42l4.28.38c.23-2.1 1.26-3.29 3.59-3.29a3.65 3.65 0 0 1 2.63.81 3 3 0 0 1 .73 2.29v1c-3 .19-6.68.72-8.55 1.56a5.25 5.25 0 0 0-3.48 5.08c0 3.4 2.45 5.57 5.92 5.57a7.63 7.63 0 0 0 6.22-2.71c.41 1.9 1.75 2.61 4.14 2.61a6.21 6.21 0 0 0 2-.31V36c-1.73.31-2-.7-2-2.18z"
+                  ></path>
+                  <path
+                    class="abstract-logo-letter-7"
+                    d="M175.35 29.31c0-4.23 2-6.17 4.57-6.17 1.8 0 3.17.84 3.7 3.35l4-1.37A7.33 7.33 0 0 0 180 19.4c-5.69 0-9.27 3.78-9.27 10s3.51 10.06 9 10.06c4.31 0 6.83-2.28 7.93-5.45l-4-1.37a3.51 3.51 0 0 1-3.7 3.09c-2.86-.01-4.61-2.22-4.61-6.42z"
+                  ></path>
+                  <path
+                    class="abstract-logo-letter-8"
+                    d="M196.23 23.52h3.67V20h-3.67v-6.2h-4.44l-.08 6.2h-3v3.57h3v10.4a5.92 5.92 0 0 0 1.07 4c.77.92 2 1.38 3.9 1.38a13.24 13.24 0 0 0 3.32-.43v-3.59a5.51 5.51 0 0 1-1.83.35c-1.38 0-1.94-.69-1.94-2.64z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+          </h1>
+          <div class="w-0.5 h-7 bg-white mx-4"></div>
+          <h2 class="text-2xl text-white hover:underline">
+            <a href="/">Help Center</a>
+          </h2>
+        </div>
+        <!-- header-buttons -->
+        <div>
+          <a
+            href="/"
+            class="text-2xl text-white border border-white rounded-lg px-5 py-2"
+            >Submit a request</a
+          >
+          <a
+            href="/"
+            class="text-2xl text-white border border-blue bg-blue rounded-lg px-8 py-2 ml-4 hover:bg-white hover:text-black transition-all delay-75 focus:bg-white focus:text-black"
+            >Sign in</a
+          >
+        </div>
+      </header_wrap>
+    </header>
+
+    <!-- section 1 -->
+    <main class="bg-lilac h-[397px] flex justify-center items-center flex-col">
+      <h3 class="sr-only">section_1</h3>
+      <p class="text-[80px] mb-4">How can we help?</p>
+      <form action="/" method="POST">
+        <fieldset class="relative">
+          <legend class="sr-only">검색 창</legend>
+          <div>
+            <label for="search"></label>
+            <input
+              type="text"
+              autocomplete="off"
+              name="search"
+              id="search"
+              class="block w-[720px] h-16 border border-solid border-1 border-gray-700 rounded shadow-lg shadow-blue-500/40 pl-5 text-xl focus:outline-0"
+              placeholder="Search"
+            />
+          </div>
+          <button type="submit" class="absolute right-3 top-1/4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 24 24"
+              style="fill: rgba(0, 0, 0, 1);"
+            >
+              <path
+                d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+              ></path>
+            </svg>
+          </button>
+        </fieldset>
+      </form>
+    </main>
+    
+  <section>
     <h3 class="sr-only">help list</h3>
     <ul class="grid grid-cols-2 gap-x-12 gap-y-24 text-2xl sm:grid-cols-1 ">
       <li class="flex">
@@ -62,64 +190,74 @@
       </li>
     </ul>
   </section>
+  
   <button class="bg-blue rounded-full px-5 py-3 flex justify-center fixed right-5 bottom-4">
     <svg class="fill-white" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><g id="Layer_4"><path d="M11,12.3V13c0,0-1.8,0-2,0v-0.6c0-0.6,0.1-1.4,0.8-2.1c0.7-0.7,1.6-1.2,1.6-2.1c0-0.9-0.7-1.4-1.4-1.4 c-1.3,0-1.4,1.4-1.5,1.7H6.6C6.6,7.1,7.2,5,10,5c2.4,0,3.4,1.6,3.4,3C13.4,10.4,11,10.8,11,12.3z"></path><circle cx="10" cy="15" r="1"></circle><path d="M10,2c4.4,0,8,3.6,8,8s-3.6,8-8,8s-8-3.6-8-8S5.6,2,10,2 M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10s10-4.5,10-10S15.5,0,10,0 L10,0z"></path></g></svg>
     <span class="text-white text-base pl-4">Help</span>
   </button>
-  <footer class="bg-black text-white flex">
-    <h3 class="sr-only">necesarry onformation and help</h3>
-    <ul class="info_wrap flex">
-      <li class="info1">
-        <h4 class="info_title font-bold text-red-700">Abstract</h4>
-        <ul class="info_list">
-          <li><a href="/">Start Trial</a></li>
-          <li><a href="/">Pricing</a></li>
-          <li><a href="/">Download</a></li>
-        </ul>
-      </li>
-      <li class="info2">
-        <h4 class="info_title font-bold">Resources</h4>
-        <ul class="info_list">
-          <li><a href="/">Blog</a></li>
-          <li><a href="/">Help Center</a></li>
-          <li><a href="/">Release Notes</a></li>
-          <li><a href="/">Status</a></li>
-        </ul>
-      </li>
-      <li class="info3">
-        <h4 class="info_title font-bold">Community</h4>
-        <ul class="info_list">
-          <li><a href="/">Twitter</a></li>
-          <li><a href="/">LinkedIn</a></li>
-          <li><a href="/">Facebook</a></li>
-          <li><a href="/">Dribbble</a></li>
-        </ul>
-      </li>
-      <li class="info4">
-        <h4 class="info_title font-bold">Company</h4>
-        <ul class="info_list">
-          <li><a href="/">About Us</a></li>
-          <li><a href="/">Careers</a></li>
-          <li><a href="/">Legal</a></li>
-          <li class="e-mail">
-            <h5 class="font-bold">Contact Us</h5>
-            <a href="mailto:info@abstract.com">info@abstract.com</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <div class="footer_right flex flex-col">
-      <div class="footer_logo">
-        <!-- <svg class="abstract-logo-footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 51" preserveAspectRatio="xMinYMid slice"> -->
-        <svg class="abstract-logo-footer" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid slice">
-          <g class="abstract-logo-mark-footer" fill="#fff">
-            <path d="M25.41 0C5.08 0 0 5.08 0 25.41s5.08 25.41 25.41 25.41 25.41-5.08 25.41-25.41S45.74 0 25.41 0zm-4.17 39.31A9.73 9.73 0 1 1 31 29.58a9.75 9.75 0 0 1-9.76 9.73zm17.67-.4h-4.77V16.67H11.91v-4.76h27z"></path>
-            <circle cx="21.24" cy="29.58" r="4.96"></circle>
-          </g>
-        </svg>
-      </div>
-      <div class="copy">
-        © Copyright 2022<br>Abstract Studio Design, Inc.<br>All rights reserved
+
+  <!-- ! footer start -->
+  <footer class="bg-black text-white w-full h-2/4">
+    <h3 class="sr-only">necesarry information and help</h3>
+    <!-- ! footer wrapper -->
+    <div class="w-5/6 h-5/6 my-0 ml-auto mr-auto flex relative ">
+      
+      <!-- ! footer info -->
+      <ul class="flex w-5/6 justify-around">
+        <li class="info1">
+          <h4 class="info_title font-bold text-xl my-2 mx-auto ">Abstract</h4>
+          <ul class="info_list">
+            <li class="my-3"><a href="/">Start Trial</a></li>
+            <li class="my-3"><a href="/">Pricing</a></li>
+            <li class="my-3"><a href="/">Download</a></li>
+          </ul>
+        </li>
+        <li class="info2">
+          <h4 class="info_title font-bold text-xl my-2 mx-auto">Resources</h4>
+          <ul class="info_list">
+            <li class="my-3"><a href="/">Blog</a></li>
+            <li class="my-3"><a href="/">Help Center</a></li>
+            <li class="my-3"><a href="/">Release Notes</a></li>
+            <li class="my-3"><a href="/">Status</a></li>
+          </ul>
+        </li>
+        <li class="info3">
+          <h4 class="info_title font-bold text-xl my-2 mx-auto">Community</h4>
+          <ul class="info_list">
+            <li class="my-3"><a href="/">Twitter</a></li>
+            <li class="my-3"><a href="/">LinkedIn</a></li>
+            <li class="my-3"><a href="/">Facebook</a></li>
+            <li class="my-3"><a href="/">Dribbble</a></li>
+          </ul>
+        </li>
+        <li class="info4">
+          <h4 class="info_title font-bold text-xl my-2 mx-auto">Company</h4>
+          <ul class="info_list">
+            <li class="my-3"><a href="/">About Us</a></li>
+            <li class="my-3"><a href="/">Careers</a></li>
+            <li class="my-3"><a href="/">Legal</a></li>
+            <li class="e-mail my-5">
+              <h5 class="font-bold text-xl my-2 mx-auto">Contact Us</h5>
+              <a href="mailto:info@abstract.com">info@abstract.com</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- ! footer right (logo and copyright) -->
+      <div class="absolute right-0 bottom-0">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 51" preserveAspectRatio="xMinYMid slice">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid slice"> -->
+            <g class="abstract-logo-mark-footer" fill="#fff">
+              <path d="M25.41 0C5.08 0 0 5.08 0 25.41s5.08 25.41 25.41 25.41 25.41-5.08 25.41-25.41S45.74 0 25.41 0zm-4.17 39.31A9.73 9.73 0 1 1 31 29.58a9.75 9.75 0 0 1-9.76 9.73zm17.67-.4h-4.77V16.67H11.91v-4.76h27z"></path>
+              <circle cx="21.24" cy="29.58" r="4.96"></circle>
+            </g>
+          </svg>
+        </div>
+        <div class="mt-5">
+          © Copyright 2022<br>Abstract Studio Design, Inc.<br>All rights reserved
+        </div>
       </div>
     </div>
   </footer>
